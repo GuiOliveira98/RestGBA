@@ -62,5 +62,9 @@ app.get("/execute", function (req, res) {
     gba.downloadSavedataToFile("save/game.sav");
   }
 
+  if (message === "RESET") {
+    gba.reset();
+  }
+
   res.send("Completed!");
 });
