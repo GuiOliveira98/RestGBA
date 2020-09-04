@@ -36,7 +36,7 @@ const app = express();
 app.use(bodyParser.json());
 app.listen(3535);
 
-app.get("/execute", function (req, res) {
+app.post("/execute", function (req, res) {
   console.log(`Get /execute with body: `, req.body);
   const message = req.body.command.toUpperCase();
 
